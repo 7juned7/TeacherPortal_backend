@@ -2,7 +2,7 @@ require("dotenv").config()
 const express = require('express')
 const app = express()
 
-const port = process.env.DEV_PORT
+const port = process.env.DEV_PORT || 4000
 const mongoDB = require("./db")
 mongoDB()
 app.use((req,res,next)=>{
